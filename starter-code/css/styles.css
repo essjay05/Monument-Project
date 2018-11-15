@@ -1,1 +1,62 @@
 /* Custom Stylesheet */
+body {
+    font-family: 'Raleway', sans-serif;
+    color: rgb(74, 110, 112);   
+}
+header {
+    text-align: center;
+    font-weight: bold;
+}
+header nav {
+    color: rgb(126, 166, 168);
+    margin: 25px auto;
+}
+header a {
+    margin: 30px;
+}
+h1, h2, h3 {
+    color: rgb(74, 110, 112);
+    text-transform: capitalize;
+}
+h1 {
+    background: url('../images/blog_header_bg.jpg') no-repeat top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 80px;
+    color: white;
+    letter-spacing: .5em;
+}
+.article {
+    margin: 0px 50px;
+}
+.blog {
+    width: 100%;
+    height: auto;
+}
+.about-us {
+    padding-top: 20px;
+}
+ul {
+    color: rgb(126, 166, 168);
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color:  rgb(74, 110, 112);
+    background: rgb(198, 240, 242);
+}
+footer nav {
+    font-weight: bold;
+    padding: 25px;
+}
+footer p {
+    padding: 15px;
+    border-top: 3px solid rgb(74, 110, 112);
+}
