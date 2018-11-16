@@ -35,7 +35,7 @@ section p {
 section {
     display: flex;
     direction: row;
-    margin: auto 25px;
+    margin: auto 50px;
 }
 aside {
     width: 30%;
@@ -44,7 +44,7 @@ aside {
     justify
 }
 .article {
-    margin: auto 25px;
+    margin-right: 50px;
 }
 .blog {
     width: 100%;
