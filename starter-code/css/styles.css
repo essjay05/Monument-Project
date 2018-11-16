@@ -3,17 +3,23 @@ body {
     font-family: 'Raleway', sans-serif;
     color: rgb(74, 110, 112);   
 }
+/* HEADER */
 header {
     text-align: center;
     font-weight: bold;
+    color: rgb(126, 166, 168);
 }
-header nav {
+/* Style the navbar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
     color: rgb(126, 166, 168);
     display: flex;
     justify-content: space-around;
 }
+
 header a {
-    margin: 30px;
+    margin: 45px;
 }
 h1, h2, h3 {
     color: rgb(74, 110, 112);
@@ -25,19 +31,24 @@ h1 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 80px;
+    padding: 200px;
     color: white;
-    letter-spacing: .5em;
+    letter-spacing: .75em;
+    margin: 50px 50px 25px 50px;
 }
-section p {
-    font-family: 'Lato', sans-serif;
-}
+/* MAIN */
 section {
     display: flex;
     display: -webkit-flexbox;
     display: -ms-flexbox;
     direction: row;
-    margin: auto 50px;
+    margin: 30px 50px;
+}
+h2 {
+    margin: auto auto 50px auto;
+}
+section p {
+    font-family: 'Lato', sans-serif;
 }
 aside {
     width: 30%;
@@ -55,15 +66,27 @@ aside {
 .about-us {
     padding-top: 45px;
 }
-ul {
+ul li {
     color: rgb(126, 166, 168);
     margin-bottom: 5px;
     font-weight: bold;
+    height: 30px;
+    list-style: none;
+    padding: 0;
+}
+ul li::before {
+    color: rgb(74, 110, 112);
+    content: '\2022';
+    font-size: 1em;
+    padding-right: 1.1225em;
+    position: relative;
+    top: 0em;
 }
 a {
     color: inherit;
     text-decoration: none;
 }
+/* FOOTER */
 footer {
     margin-top: 40px;
     text-align: center;
