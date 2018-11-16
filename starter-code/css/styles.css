@@ -20,7 +20,7 @@ h1 {
     position: sticky; /* Set navbar to fixed position */
     position: -webkit-sticky;
     top: 0;
-    padding: 25px;
+    padding: 10px;
 }
 h1, h2, h3 {
     color: rgb(74, 110, 112);
