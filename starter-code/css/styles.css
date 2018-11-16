@@ -10,12 +10,18 @@ header {
     color: rgb(126, 166, 168);
 }
 /* Style the navbar */
-.navbar {
+#navbar {
+    width: 100%;
+    height: 50px;
     overflow: hidden;
-    background-color: #333;
+    background-color: white;
     color: rgb(126, 166, 168);
     display: flex;
     justify-content: space-around;
+    position: sticky; /* Set navbar to fixed position */
+    position: -webkit-sticky;
+    top: 0;
+    padding: 25px;
 }
 
 header a {
@@ -31,10 +37,10 @@ h1 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 200px;
+    padding: 150px;
     color: white;
     letter-spacing: .75em;
-    margin: 50px 50px 25px 50px;
+    margin: 25px 50px;
 }
 /* MAIN */
 section {
@@ -53,9 +59,6 @@ section p {
 aside {
     width: 30%;
 }
-.about-us {
-    justify
-}
 .article {
     margin-right: 50px;
 }
@@ -72,7 +75,9 @@ ul li {
     font-weight: bold;
     height: 30px;
     list-style: none;
-    padding: 0;
+    padding-left: 0;
+    justify: auto;
+    margin-left: 0;
 }
 ul li::before {
     color: rgb(74, 110, 112);
