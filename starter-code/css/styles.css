@@ -9,7 +9,8 @@ header {
 }
 header nav {
     color: rgb(126, 166, 168);
-    margin: 25px auto;
+    display: flex;
+    justify-content: space-around;
 }
 header a {
     margin: 30px;
@@ -17,6 +18,7 @@ header a {
 h1, h2, h3 {
     color: rgb(74, 110, 112);
     text-transform: capitalize;
+    font-family: 'Raleway', sans-serif;
 }
 h1 {
     background: url('../images/blog_header_bg.jpg') no-repeat top;
@@ -26,6 +28,9 @@ h1 {
     padding: 80px;
     color: white;
     letter-spacing: .5em;
+}
+article p {
+    font-family: 'Lato', sans-serif;
 }
 .article {
     margin: 0px 50px;
@@ -51,12 +56,18 @@ footer {
     text-align: center;
     color:  rgb(74, 110, 112);
     background: rgb(198, 240, 242);
+    font-family: 'Raleway', sans-serif;
 }
 footer nav {
-    font-weight: bold;
-    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    padding: 50px;
 }
 footer p {
     padding: 15px;
     border-top: 3px solid rgb(74, 110, 112);
+}
+i {
+    padding: auto 50px;
 }
