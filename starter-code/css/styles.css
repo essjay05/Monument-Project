@@ -34,6 +34,8 @@ section p {
 }
 section {
     display: flex;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
     direction: row;
     margin: auto 50px;
 }
@@ -71,6 +73,8 @@ footer {
 }
 footer nav {
     display: flex;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
     justify-content: center;
     align-items: space-around;
 }
