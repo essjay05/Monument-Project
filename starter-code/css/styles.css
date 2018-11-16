@@ -103,7 +103,7 @@ footer {
     height: 75px;
 }
 i {
-    margin: 15px;
+    margin: auto 15px;
 }
 footer p {
     padding: 15px;
@@ -120,7 +120,7 @@ input[type=email], input[type=submit] {
     font-weight: bold;
     color: slategray;
     border: none;
-    margin: 20px 10px;
+    margin: auto 10px 20px;
 }
 input[type=submit] {
     width: 10%;
