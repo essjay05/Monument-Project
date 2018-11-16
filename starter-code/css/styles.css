@@ -32,15 +32,26 @@ h1 {
 section p {
     font-family: 'Lato', sans-serif;
 }
+section {
+    display: flex;
+    direction: row;
+    margin: auto 25px;
+}
+aside {
+    width: 30%;
+}
+.about-us {
+    justify
+}
 .article {
-    margin: 0px 50px;
+    margin: auto 25px;
 }
 .blog {
     width: 100%;
     height: auto;
 }
 .about-us {
-    padding-top: 20px;
+    padding-top: 45px;
 }
 ul {
     color: rgb(126, 166, 168);
@@ -70,4 +81,8 @@ footer p {
 }
 i {
     padding: 25px;
+}
+.submit {
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid rgb(74, 110, 112);
 }
