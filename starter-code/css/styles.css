@@ -4,10 +4,6 @@ body {
     color: rgb(74, 110, 112);   
 }
 /* HEADER */
-h1 {
-    text-align: center;
-    font-weight: bold;
-}
 /* Style the navbar */
 #navbar {
     width: 100%;
@@ -34,8 +30,9 @@ h1 {
     background-position: center;
     padding: 150px;
     color: white;
+    text-align: center;
+    font-weight: bold;
     letter-spacing: .75em;
-    margin: 25px 50px;
 }
 /* MAIN */
 section.flex {
@@ -48,22 +45,32 @@ section.flex {
 h2 {
     margin: auto auto 50px auto;
 }
-section p {
-    font-family: 'Lato', sans-serif;
-}
-aside {
-    width: 30%;
-}
 .article {
-    margin-right: 50px;
+    margin: 0px 25px;
 }
 .blog {
     width: 100%;
     height: auto;
 }
+section p {
+    font-family: 'Lato', sans-serif;
+}
+
+/* ASIDE SECTION */
+
+aside {
+    padding-top: 45px;
+    width: 30%;
+    height: auto;
+}
+/*
+.sidebar img {
+    width: auto;
+}*/
+/*
 .about-us {
     padding-top: 45px;
-}
+}*/
 ul {
     color: rgb(74, 110, 112);
     margin: 0px -20px;
@@ -74,19 +81,21 @@ ul a {
     font-weight: bold;
     height: 30px;
     list-style: none;
-    padding-left: 0;
+   /* padding-left: 0;*/
     justify: auto;
 }
 a {
     color: inherit;
     text-decoration: none;
 }
+
 /* LEAVE A COMMENT (SECTION) */
 /* FORM CONTAINER */
+
 .userForm {
-    padding: 20px 25%;    
+    padding: 20px 25%; 
 }
-.userForm h2 {
+.userForm h3 {
     text-align: center;
     color: rgb(74, 110, 112);
 }
@@ -101,6 +110,8 @@ input[name="emailUser"] {
 
 textarea {
     grid-area: comment;
+    height: 10em;
+    resize: none;
 }
 
 input[name="submit"] {
@@ -109,15 +120,21 @@ input[name="submit"] {
 
 .formGrid {
     display: grid;
+    width: auto;
     grid-template-areas:
         'name emailUser'
         'comment comment'
-        'comment comment'
-        'comment comment'
         'submit submit';
-    grid-gap: 15px;
-    border-color: rgb(74, 110, 112);
-    padding: 20px;
+    grid-gap: 5px;
+    padding: 15px;
+}
+
+.formGrid input, .formGrid textarea {
+    border: rgb(74, 110, 112) 2px solid;
+    font-family: 'Lato', sans-serif;
+    color: slategrey;
+    font-size: 8px;
+    padding: 5px;
 }
 
 /* FOOTER */
@@ -146,23 +163,26 @@ footer p {
     font-family: 'Lato', sans-serif;
     font-size: 10px;
 }
-input[type=email], input[type=submit] {
+
+/* FOOTER FORM */
+input[name="emailAddress"], input[name="KIT"] {
     text-align: center;
     padding: 8px;
     width: 300px;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
+    font-size: 8px;
     color: slategray;
     border: none;
     margin: auto 10px 20px;
 }
-input[type=submit] {
+input[name="KIT"] {
     width: 100px;
     color: slategray;
     border: 2px solid slategray;
     background: transparent;
 }
-input[type=submit]:hover {
+input[name="KIT"]:hover {
     animation-delay: .05ms;
     background: slategray;
     color: rgb(198, 240, 242);
