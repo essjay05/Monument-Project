@@ -64,7 +64,11 @@ aside {
 .about-us {
     padding-top: 45px;
 }
-ul li {
+ul {
+    color: rgb(74, 110, 112);
+    margin: 0px -20px;
+}
+ul a {
     color: rgb(126, 166, 168);
     margin-bottom: 5px;
     font-weight: bold;
@@ -72,15 +76,6 @@ ul li {
     list-style: none;
     padding-left: 0;
     justify: auto;
-    margin-left: 0;
-}
-ul li::before {
-    color: rgb(74, 110, 112);
-    content: '\2022';
-    font-size: 1em;
-    padding-right: 1em;
-    position: relative;
-    top: 0em;
 }
 a {
     color: inherit;
