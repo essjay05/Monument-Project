@@ -303,6 +303,9 @@ footer p {
 }
 
 /* FOOTER FORM */
+br {
+    display: none;
+}
 input[name="emailAddress"], input[name="KIT"] {
     text-align: center;
     padding: 1em;
@@ -420,6 +423,9 @@ a:hover, li a:hover {
             'emailAddress'
             'KIT';
         text-align: center;
+    }
+    br {
+        display: block;
     }
     .submitEmail {
         width: 100%;
