@@ -393,6 +393,9 @@ a:hover, li a:hover {
     .mobile-menu .show-menu {
         display:block;
     }
+    .desk-header {
+        display: none;
+    }
     h1 {
         background: url('../images/blog_header_bg.jpg') no-repeat top;
         background-size: cover;
