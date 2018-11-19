@@ -1,0 +1,193 @@
+/* Custom Stylesheet */
+body {
+    font-family: 'Raleway', sans-serif;
+    color: rgb(74, 110, 112);   
+}
+/* HEADER */
+/* Style the navbar */
+#navbar {
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+    background-color: rgb(250, 250, 250, 1);
+    color: rgb(126, 166, 168);
+    display: flex;
+    justify-content: space-around;
+    position: sticky; /* Set navbar to fixed position */
+    position: -webkit-sticky;
+    top: 0;
+    padding: 10px;
+}
+h1, h2, h3 {
+    color: rgb(74, 110, 112);
+    text-transform: capitalize;
+    font-family: 'Raleway', sans-serif;
+}
+h1 {
+    background: url('../images/blog_header_bg.jpg') no-repeat top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 150px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: .75em;
+}
+/* MAIN */
+section.flex {
+    display: flex;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    direction: row;
+    margin: 30px 50px;
+}
+h2 {
+    margin: auto auto 50px auto;
+}
+.article {
+    margin: 0px 25px;
+}
+.blog {
+    width: 100%;
+    height: auto;
+}
+section p {
+    font-family: 'Lato', sans-serif;
+}
+
+/* ASIDE SECTION */
+
+aside {
+    padding-top: 45px;
+    width: 30%;
+    height: auto;
+}
+/*
+.sidebar img {
+    width: auto;
+}*/
+/*
+.about-us {
+    padding-top: 45px;
+}*/
+ul {
+    color: rgb(74, 110, 112);
+    margin: 0px -20px;
+}
+ul a {
+    color: rgb(126, 166, 168);
+    margin-bottom: 5px;
+    font-weight: bold;
+    height: 30px;
+    list-style: none;
+   /* padding-left: 0;*/
+    justify: auto;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* LEAVE A COMMENT (SECTION) */
+/* FORM CONTAINER */
+
+.userForm {
+    padding: 20px 25%; 
+}
+.userForm h3 {
+    text-align: center;
+    color: rgb(74, 110, 112);
+}
+/* FORM STYLES */
+input[name="name"] {
+    grid-area: name;
+}
+
+input[name="emailUser"] {
+    grid-area: emailUser;
+}
+
+textarea {
+    grid-area: comment;
+    height: 10em;
+    resize: none;
+}
+
+input[name="submit"] {
+    grid-area: submit;
+}
+
+.formGrid {
+    display: grid;
+    width: auto;
+    grid-template-areas:
+        'name emailUser'
+        'comment comment'
+        'submit submit';
+    grid-gap: 5px;
+    padding: 15px;
+}
+
+.formGrid input, .formGrid textarea {
+    border: rgb(74, 110, 112) 2px solid;
+    font-family: 'Lato', sans-serif;
+    color: slategrey;
+    font-size: 8px;
+    padding: 5px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color:  rgb(74, 110, 112);
+    background: rgb(198, 240, 242);
+    font-family: 'Raleway', sans-serif;
+}
+.icons {
+    display: flex;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+}
+i {
+    margin: auto 15px;
+}
+footer p {
+    padding: 15px;
+    border-top: 2px solid rgb(74, 110, 112);
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+}
+
+/* FOOTER FORM */
+input[name="emailAddress"], input[name="KIT"] {
+    text-align: center;
+    padding: 8px;
+    width: 300px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 8px;
+    color: slategray;
+    border: none;
+    margin: auto 10px 20px;
+}
+input[name="KIT"] {
+    width: 100px;
+    color: slategray;
+    border: 2px solid slategray;
+    background: transparent;
+}
+input[name="KIT"]:hover {
+    animation-delay: .05ms;
+    background: slategray;
+    color: rgb(198, 240, 242);
+    cursor: pointer;
+}
+a:hover {
+    color: red;
+}

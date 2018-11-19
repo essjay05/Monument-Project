@@ -1,52 +1,209 @@
 /* Custom Stylesheet */
+/*
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
+@-ms-viewport {
+    width: device-width;
+}
+*/
+
+/* ------------- GENERAL STYLING ----------------- */
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
-    color: rgb(74, 110, 112);   
+    color: rgb(74, 110, 112); 
 }
-/* HEADER */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ---------------- HEADER ------------------- */
 /* Style the navbar */
-#navbar {
-    width: 100%;
-    height: 25px;
-    overflow: hidden;
-    background-color: rgb(250, 250, 250, 1);
+.mobile-menu {
+    display:block;
+    width:100%;
+    background: white;
+    line-height: 1.6em;
+    font-weight: 400;
+    width:100%;
+    text-align:center;
+    position: relative;
+    margin:0 auto;
+  }
+  /*Strip the ul of padding and list styling*/
+  .mobile-menu ul {
+    list-style-type:none;
+    margin: 0 auto;
+    padding-left:0;
+    text-align:center;
+    width:100%;
+    position: absolute;
+    background: white;
+  }
+  
+  /*Create a horizontal list with spacing*/
+  .mobile-menu li {
+    display:inline-block;
+    /*float: left;
+    margin-right: 1px;*/
+  }
+  
+  /*Style for menu links*/
+  .mobile-menu li a {
+    display:block;
+    min-width:140px;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
     color: rgb(126, 166, 168);
+    text-transform:uppercase;
+    background: white;
+    text-decoration: none;
+    margin-left:-5px;
+    padding: 10px 0;  
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  }
+  /*Style for dropdown links*/
+.mobile-menu li:hover ul a {
+	background: lightgrey;
+	color: rgb(74, 110, 112);
+	height: 40px;
+	line-height: 40px;
+}
+
+/*Hover state for dropdown links*/
+.mobile-menu li:hover .mobile-menu ul a:hover {
+	color: #4db3ff;
+}
+
+/*Hide dropdown links until they are needed*/
+.mobile-menu li ul {
+	display: none;
+}
+
+/*Make dropdown links vertical*/
+.mobile-menu li ul li {
+	display: block;
+	float: none;
+}
+
+/*Prevent text wrapping*/
+.mobile-menu li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+
+
+/*Style 'show menu' label button and hide it by default*/
+.mobile-menu .show-menu {
+    text-decoration: none;
+    color: rgb(126, 166, 168);
+    background: white;
+    text-align: center;
+    padding: 10px 15px;
+    display: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.mobile-menu .show-menu span{
+   padding-left: 1em;
+}
+
+/*Hide checkbox*/
+.mobile-menu input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+.mobile-menu input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+/* --------- ORIGINAL (MONUMENT 2) HEADER NAVBAR -------
+#navbar {
+    display: inline-block;
+    font-family: 'Raleway' sans-serif;
+    font-weight: 600;
+    width: 100%;
+    height: 3em;
+    background-color: rgb(250, 250, 250, 1);
+    overflow: hidden;
+    color: rgb(126, 166, 168);
+    
+    --FLEX NAV BAR 
     display: flex;
     justify-content: space-around;
-    position: sticky; /* Set navbar to fixed position */
+    position: sticky;
     position: -webkit-sticky;
+    --
+
+    position: fixed;
+    padding: .75em;
     top: 0;
-    padding: 10px;
+    left: 0;
+    cursor: pointer;
+    text-align: center;
 }
-h1, h2, h3 {
+
+.deskNav a {
+    margin: 0 6em;
+}
+*/
+
+
+/* Header styling */
+.raleway, .comment {
     color: rgb(74, 110, 112);
-    text-transform: capitalize;
     font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+.lines, .mobile-header {
+    display: none;
 }
 h1 {
     background: url('../images/blog_header_bg.jpg') no-repeat top;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    padding: 150px;
+    padding: 5em;
+    font-family: 'Raleway', sans-serif;
     color: white;
     text-align: center;
     font-weight: bold;
     letter-spacing: .75em;
-}
+    max-width: 100%;
+    height: 10em;
+    margin-top: 25em;
+} 
 /* MAIN */
 section.flex {
     display: flex;
     display: -webkit-flexbox;
     display: -ms-flexbox;
     direction: row;
-    margin: 30px 50px;
+    margin: 1em 2em;
+}
+img {
+    height: auto;
+    max-width: 100%;
 }
 h2 {
-    margin: auto auto 50px auto;
+    margin: 1em auto;
 }
-.article {
-    margin: 0px 25px;
+.leftArticle {
+    margin: 0em 2.5em 0em 5em;
 }
 .blog {
     width: 100%;
@@ -59,9 +216,10 @@ section p {
 /* ASIDE SECTION */
 
 aside {
-    padding-top: 45px;
-    width: 30%;
+    padding-top: 3em;
+    width: 100%;
     height: auto;
+    margin: 0em 5em 0em 2.5em;
 }
 /*
 .sidebar img {
@@ -73,27 +231,24 @@ aside {
 }*/
 ul {
     color: rgb(74, 110, 112);
-    margin: 0px -20px;
+    margin: 0em -1em;
 }
 ul a {
     color: rgb(126, 166, 168);
-    margin-bottom: 5px;
+    /* margin-bottom: 5px;*/
     font-weight: bold;
-    height: 30px;
+    height: 5em;
     list-style: none;
    /* padding-left: 0;*/
     justify: auto;
 }
-a {
-    color: inherit;
-    text-decoration: none;
-}
+
 
 /* LEAVE A COMMENT (SECTION) */
 /* FORM CONTAINER */
 
 .userForm {
-    padding: 20px 25%; 
+    margin: 5% 10%; 
 }
 .userForm h3 {
     text-align: center;
@@ -125,21 +280,24 @@ input[name="submit"] {
         'name emailUser'
         'comment comment'
         'submit submit';
-    grid-gap: 5px;
-    padding: 15px;
+    grid-gap: 1em;
+    padding: 3em;
 }
 
 .formGrid input, .formGrid textarea {
-    border: rgb(74, 110, 112) 2px solid;
+    border: rgb(74, 110, 112) .25em solid;
     font-family: 'Lato', sans-serif;
     color: slategrey;
-    font-size: 8px;
-    padding: 5px;
+    font-size: .75em;
+    padding: 1em;
+}
+.formGrid::placeholder {
+    font-weight: 900;
 }
 
 /* FOOTER */
 footer {
-    margin-top: 40px;
+    margin-top: 3em;
     text-align: center;
     color:  rgb(74, 110, 112);
     background: rgb(198, 240, 242);
@@ -151,35 +309,38 @@ footer {
     display: -ms-flexbox;
     justify-content: center;
     align-items: center;
-    height: 75px;
+    height: 4em;
+    font-size: 1.5em;
 }
 i {
-    margin: auto 15px;
+    margin: 0em 1em;
 }
 footer p {
-    padding: 15px;
-    border-top: 2px solid rgb(74, 110, 112);
+    padding: 1.5em;
+    border-top: .15em solid rgb(74, 110, 112);
     font-weight: 400;
     font-family: 'Lato', sans-serif;
-    font-size: 10px;
+    font-size: 1em;
 }
 
 /* FOOTER FORM */
 input[name="emailAddress"], input[name="KIT"] {
     text-align: center;
-    padding: 8px;
-    width: 300px;
+    padding: 1em;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
-    font-size: 8px;
+    font-size: .75em;
     color: slategray;
+    margin: 0em .5em 2.5em;
+}
+input[name="emailAddress"] {
     border: none;
-    margin: auto 10px 20px;
+    width: 30em;
 }
 input[name="KIT"] {
-    width: 100px;
+    width: 15em;
     color: slategray;
-    border: 2px solid slategray;
+    border: .25em solid slategray;
     background: transparent;
 }
 input[name="KIT"]:hover {
@@ -188,6 +349,118 @@ input[name="KIT"]:hover {
     color: rgb(198, 240, 242);
     cursor: pointer;
 }
-a:hover {
+a:hover, li a:hover {
     color: red;
 }
+
+
+/* ------------------------------------*/
+/* MEDIA QUERIES */
+
+/* 
+    ## DEVICE = Tablets / iPads
+    ## SCREEN = Below 775px
+
+*/
+
+@media screen and (max-width : 560px) {
+    /* RESPONSIVE MOBILE MENU WITH CSS */
+    .mobile-menu, .lines, .mobile-header {
+        display: block;
+    }
+    .lines {
+    color: rgb(126, 166, 168);
+    background: transparent;
+    float: left;
+    margin: 0;
+    padding: 0.5em;
+    }
+
+    /*Make dropdown links appear inline*/
+    .mobile-menu ul {
+          position: static;
+          display: none;
+    }
+    /*Create vertical spacing*/
+    .mobile-menu li {
+        margin-bottom: 1px;
+    }
+    /*Make all menu links full width*/
+    .mobile-menu ul li, .mobile-menu li a {
+        width: 100%;
+    }
+    /*Display 'show menu' link*/
+    .mobile-menu .show-menu {
+        display:block;
+    }
+    h1 {
+        background: url('../images/blog_header_bg.jpg') no-repeat top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-attachment: fixed;
+        font-family: 'Raleway', sans-serif;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: .75em;
+        width: 100%;
+        height: 10em;
+
+    } 
+    /* ------ MAIN ---------*/
+    .flex{
+        max-width: 100%;
+        height: auto;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    form {
+        display: grid;
+        grid-template-areas: 
+            'name'
+            'emailUser'
+            'comment'
+            'submit';
+    }
+    .userForm {
+        padding: 1em 10%;
+    }
+    input[name="emailAddress"] {
+        grid-area: emailAddress;
+    }
+    input[name="KIT"] {
+        grid-area: emailUser;
+    }
+    footer form {
+        display: grid;
+        grid-template-areas:
+            'emailAddress'
+            'KIT';
+        text-align: center;
+    }
+    .submitEmail {
+        width: 100%;
+    }
+
+}
+
+
+/* 
+    ## DEVICE = Mobile phones (iphones, etc.)
+    ## SCREEN = Below 560px (landscape)
+
+*/
+@media (max-width: 560px) and (orientation: landscape) {
+
+}
+
+/* 
+   ## DEVICE = Mobile phones (iphones, etc.)
+    ## SCREEN = Below 560px 
+
+*/
+
+/* HAMBURGER CODE: <i class="fas fa-bars"></i> */
