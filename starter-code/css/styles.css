@@ -1,5 +1,5 @@
 /* Custom Stylesheet */
-/*
+
 @viewport {
     width: device-width;
     zoom: 1.0;
@@ -7,13 +7,15 @@
 @-ms-viewport {
     width: device-width;
 }
-*/
+
 
 /* ------------- GENERAL STYLING ----------------- */
+/*
 * {
     margin: 0;
     padding: 0;
 }
+*/
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -65,11 +67,11 @@ a {
     background: rgba(255, 255, 255, .5);
     text-decoration: none;
     padding: 1.5em 5em;  
-  -webkit-transition: all 0.4s ease 0s;
-  -moz-transition: all 0.4s ease 0s;
-  -ms-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
+  -webkit-transition-delay: all 1s ease-in-out .5s;
+  -moz-transition-delay: all 1s ease-in-out .5s;
+  -ms-transition-delay: all 1s ease-in-out .5s;
+  -o-transition-delay: all 1s ease-in-out .5s;
+  transition-delay: all 1s ease-in-out .5s;
   }
   
 
@@ -210,15 +212,14 @@ aside {
 }*/
 ul {
     color: rgb(74, 110, 112);
-    margin: 0em 1.25em;
+    margin: 0em -1.25em;
 }
-ul a {
+ul a {  
     color: rgb(126, 166, 168);
     /* margin-bottom: 5px;*/
     font-weight: bold;
     height: 5em;
     list-style: none;
-   /* padding-left: 0;*/
     justify: auto;
 }
 
@@ -261,6 +262,7 @@ input[name="submit"] {
         'submit submit';
     grid-gap: 1em;
     padding: 3em;
+    display: -ms-grid; /* IE 10 */
 }
 
 .formGrid input, .formGrid textarea {
@@ -336,15 +338,135 @@ a:hover, li a:hover {
 }
 
 
-/* ------------------------------------*/
-/* MEDIA QUERIES */
 
-/* 
+/* -----------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
     ## DEVICE = Tablets / iPads
     ## SCREEN = Below 775px
-
+-----------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
 */
+@media screen and (max-width : 775px) {
+/* RESPONSIVE MOBILE MENU WITH CSS */
+.mobile-menu, .lines, .mobile-header {
+    display: block;
+}
+.lines {
+color: white;
+background: transparent;
+float: left;
+margin: 0;
+padding: .5em;
+font-size: 1.5em;
+}
 
+/*Make dropdown links appear inline*/
+.mobile-menu ul {
+      position: static;
+      display: none;
+}
+/*Create vertical spacing*/
+.mobile-menu li {
+    margin-bottom: 1px;
+}
+/*Make all menu links full width*/
+.mobile-menu ul li, .mobile-menu li a {
+    width: 100%;
+}
+/*Display 'show menu' link*/
+.mobile-menu .show-menu {
+    display: block;
+}
+.desk-header {
+    display: none;
+}
+h1 {
+    background: url('../images/blog_header_bg.jpg') no-repeat top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: .5em;
+    width: 100%;
+    height: auto;
+    display: block;
+    font-size: 2em;
+} 
+/* ------ MAIN ---------*/
+section.flex {
+    display: block;
+    margin: 1em 2em;
+    max-width: 100%;
+    height: auto;
+    padding:.5em;
+}
+ul a {
+    margin: 0 1em;
+}
+.aside-about {
+    display: block;
+    margin-right: 3em;
+}
+
+/* -------- USER Form -------- */
+
+form {
+    display: grid;
+    display: -ms-grid;
+    grid-template-areas: 
+        'name'
+        'emailUser'
+        'comment'
+        'submit';
+}
+.userForm {
+    padding: 1em 10%;
+}
+input[name="emailAddress"] {
+    grid-area: emailAddress;
+}
+input[name="KIT"] {
+    grid-area: emailUser;
+}
+
+/* ------------ FOOTER ------------- */
+
+footer form {
+    display: flex;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    justify-content: center;
+    align-items: center;
+}
+input[name="emailAddress"] {
+    border: none;
+    width: 20em;
+}
+br {
+    display: block;
+}
+input[name="KIT"] {
+    width: 10em;
+    color: slategray;
+    border: .25em solid slategray;
+    background: transparent;
+
+}
+
+/* -----------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+    ## DEVICE = mobile phones /iPhones/Androids etc.
+    ## SCREEN = Below 560px
+-----------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+*/
 @media screen and (max-width : 560px) {
     /* RESPONSIVE MOBILE MENU WITH CSS */
     .mobile-menu, .lines, .mobile-header {
@@ -389,7 +511,7 @@ a:hover, li a:hover {
         text-align: center;
         font-weight: bold;
         letter-spacing: .5em;
-        width: 80em;
+        width: 100%;
         height: auto;
         display: block;
         font-size: 2em;
@@ -397,13 +519,18 @@ a:hover, li a:hover {
     /* ------ MAIN ---------*/
     section.flex {
         display: block;
-        margin: 1em 2em;
         max-width: 100%;
         height: auto;
     }
-    .about-us {
-        max-width: 85%;
+    ul a {
+        margin: 0 1em;
     }
+    .aside-about {
+        display: block;
+        margin-right: 3em;
+    }
+
+    /* ------------ USER FORM ----------- */
     form {
         display: grid;
         grid-template-areas: 
@@ -415,6 +542,8 @@ a:hover, li a:hover {
     .userForm {
         padding: 1em 10%;
     }
+
+    /* ------------ FOOTER ------------- */
     input[name="emailAddress"] {
         grid-area: emailAddress;
     }
