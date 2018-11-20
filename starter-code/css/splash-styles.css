@@ -1,0 +1,48 @@
+/* CUSTOM STYLESHEET */
+
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+/* ----------- GENERAL STYLING ------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    text-align: center;
+    color: rgb(74, 110, 112);
+}
+
+/* -----------RESPONSIVE IMAGES ---------------- */
+img {
+    max-width: 100%;
+}
+
+/*------------- TYPOGRAPHY ---------------------- */
+p {
+    font-family: 'Lato', sans-serif;
+    text-transform: none;
+    line-height: 1.4;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
