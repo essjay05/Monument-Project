@@ -355,24 +355,33 @@ a:hover, li a:hover {
 --------------------------------------------------------
 --------------------------------------------------------
 */
-@media screen and (max-width : 775px) {
+@media screen and (max-width : 800px) {
 /* RESPONSIVE MOBILE MENU WITH CSS */
 .desk-header, #navbar  {
     display: none;
 }
-.burgerButton, .mobile-header { 
+.mobile-header { 
     display: block;
 }
-
-.burgerButton {
+#dropDownMenu {
+    display: none;
+}
+.mobile-menu:hover #dropDownMenu {
+    display: block;
+}
+.mobile-menu {
     background:transparent;
     color: white;
-    padding: 2em;
+    padding: 0em;
     font-size: 1em;
     cursor: pointer;
+    outline: 0;
+    font-weight: 500;
+    font-size: 2em;
+    transition: all .5s ease-in-out;
+    display: block;
 }
-.lines {
-position: relative;    
+.lines {   
 display: block;
 color: white;
 background: transparent;
@@ -388,7 +397,7 @@ cursor: pointer;
     max-width: 25%;
 }
 .lines:hover {
-    nav iddisplay: block;
+    display: block;
 }
 /*.lines:hover {
     #showMobileMenu {
