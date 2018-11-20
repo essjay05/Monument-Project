@@ -10,6 +10,8 @@
 }
 
 /* ----------- GENERAL STYLING ------------- */
+/* ----------- GENERAL STYLING ------------- */
+/* ----------- GENERAL STYLING ------------- */
 
 * {
     margin: 0;
@@ -45,4 +47,35 @@ p {
 
 h1, h2, h3, h4 {
     font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(126, 166, 168);
+    font-weight: 600;
+    transition: all .5s ease-in-out;
+}
+
+a:hover {
+    color: red;
+}
+
+/*------------- LISTS ---------------------- */
+ul a {
+    text-transform: none;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    display: block;
+    text-align: left;
+}
+
+/*------------- LAYOUT ---------------------- */
+section {
+    padding: 5em 1em;
 }
