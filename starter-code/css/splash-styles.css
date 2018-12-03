@@ -49,6 +49,10 @@ h1, h2, h3, h4 {
     font-weight: 600;
 }
 
+h1 {
+    font-size: 5em;
+    letter-spacing: 1em;
+}
 a {
     text-decoration: none;
     color: rgb(126, 166, 168);
@@ -79,3 +83,71 @@ li {
 section {
     padding: 5em 1em;
 }
+/*
+.wrap {
+    max-width: 500em;
+    width: 100%;
+    margin: 0 auto;
+}
+*/
+.grid-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.main-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+
+
+/*------------- DESIGN ---------------------- */
+/*------------- DESIGN ---------------------- */
+/*------------- DESIGN ---------------------- */
+
+/* ...................................
+HEADER 
+.................................... */
+
+#splash {
+    background: url('../images/home_header_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    /* If there is a background-image */
+    height: 20em;
+    margin-bottom: 10em;
+    display: block;
+}
+h1 a {
+    color: black;
+    margin: 50%;
+    display: inline-block;
+    letter-spacing: .75em;
+}
+header h3 {
+    color: black;
+    font-size: 2em;
+    letter-spacing: .5em;
+}
+

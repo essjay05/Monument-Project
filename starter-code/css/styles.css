@@ -385,13 +385,16 @@ a:hover, li a:hover {
 }
 .lines {   
 display: block;
-color: white;
+color: teal;
 background: transparent;
 margin: 5em;
 padding: 1em;
 font-size: 2em;
 cursor: pointer;
 z-index: 2;
+}
+a.burgerButton {
+    color: teal;
 }
 .dropDownMenu {
     display: none;
